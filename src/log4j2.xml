@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+  <Appenders>
+  <!-- 
+    <JDBC name="database" tableName="mcs_logs">
+      <Filters>
+        <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+      </Filters>
+      <DataSource jndiName="java:comp/env/jdbc/monitor" />
+      <Column name="TIME" isEventTimestamp="true" />
+      <Column name="LEVEL" pattern="%level" />
+      <Column name="MESSAGE" pattern="%message" />
+      <Column name="EXCEPTION" pattern="%ex{full}" />
+      <Column name="LINE" pattern="%L" />
+      <Column name="METHOD" pattern="%method" />
+      <Column name="CLASS" pattern="%class" />
+      <Column name="IP" pattern="127.0.0.1" />
+      <Column name="SOURCE" pattern="history" />
+    </JDBC>
+     -->
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}][%p][%class.%method() %L] : %m%n"/>
+    </Console>
+    <RollingFile name="logfile" fileName="logs/app.log" filePattern="logs/%d{yyyy-MM-dd-HH}.log">
+    	<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}][%p][%class.%method() %L] : %m%n"/>
+      	<Policies>  
+        	<TimeBasedTriggeringPolicy interval="1" modulate="true"/> 
+        </Policies> 
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <!-- <AppenderRef ref="database"/> -->
+      <AppenderRef ref="console"/>
+      <AppenderRef ref="logfile"/>
+    </Root>
+    <logger name="com.gargoylesoftware.htmlunit" level="fatal" additivity="false"/>
+  </Loggers>
+</Configuration>

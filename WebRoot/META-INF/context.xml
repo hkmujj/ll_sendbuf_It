@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/"> 
+            
+    <Resource
+            name="jdbc/llmain"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://192.168.1.244:3306/llmain"
+            maxIdle="2"
+            maxActive="40"
+            maxWait="20000"
+			testOnBorrow="true" 
+            testWhileIdle="true" 
+            validationQuery="select 1 from dual"
+            username="root"
+            password="123456"/>
+            
+        <Resource
+            name="jdbc/lltemp"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://120.24.229.19:9939/lltmp"
+            maxIdle="2"
+            maxActive="40"
+            maxWait="20000"
+			testOnBorrow="true" 
+            testWhileIdle="true" 
+            validationQuery="select 1 from dual"
+            username="lltmp"
+            password="lltmp2016"/>
+            
+</Context>

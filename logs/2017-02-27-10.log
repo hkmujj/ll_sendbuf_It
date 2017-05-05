@@ -1,0 +1,4 @@
+[2017-02-27 10:57:11][INFO][http.HttpAccess.postNameValuePairRequest() 288] : [test] response text = <?xml version="1.0" encoding="utf-8"?><root return="-1" info="Error on line 1 of document  : 文件提前结束。 Nested exception: 文件提前结束。"/>
+[2017-02-27 10:57:42][INFO][http.HttpAccess.postNameValuePairRequest() 288] : [test] response text = <?xml version="1.0" encoding="utf-8"?><root return="-1" info="Error on line 1 of document  : 文件提前结束。 Nested exception: 文件提前结束。"/>
+[2017-02-27 10:58:39][INFO][http.HttpAccess.postNameValuePairRequest() 288] : [test] response text = <?xml version="1.0" encoding="utf-8"?><root return="-1" info="Error on line 1 of document  : 文件提前结束。 Nested exception: 文件提前结束。"/>
+[2017-02-27 10:58:51][INFO][http.HttpAccess.getNameValuePairRequest() 470] : [test] response text = <?xml version="1.0" encoding="utf-8"?><root return="-1" info="参数不正确"/>
